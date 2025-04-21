@@ -31,20 +31,25 @@ class _HomeState extends State<Home> {
   List trendingmovies=[];
   List topratedmovies=[];
   List tvshows=[];
-  final String apikey='744ad860f1b108ad496f027ee9517a4f';
-  final readaccesstoken='eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3NDRhZDg2MGYxYjEwOGFkNDk2ZjAyN2VlOTUxN2E0ZiIsIm5iZiI6MTc0MjM2NjE4MC44MzEsInN1YiI6IjY3ZGE2NWU0ZTgzMDI1MzMyMDZjYTc5YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.bfOFdyo98lsN73vUGy71reVbTzoVm4RX7nrM51c0SGg';
+  final String apikey='your_api_key';
+  final readaccesstoken='api_read_access_token';
+
+  // Run function at start of app
+  
   @override
   void initState(){
     loadmovies();
     super.initState();
   }
-  
   loadmovies() async{
     TMDB tmdbWithCustomLogs=TMDB(ApiKeys(apikey, readaccesstoken),
     logConfig: ConfigLogger(
       showLogs: true,
       showErrorLogs: true
     ));
+
+    // Storing data in map
+    
     Map trendingresult=await tmdbWithCustomLogs.v3.trending.getTrending();
     Map topratedresult=await tmdbWithCustomLogs.v3.movies.getTopRated();
     Map tvshowsresult=await tmdbWithCustomLogs.v3.tv.getTopRated();
@@ -53,7 +58,9 @@ class _HomeState extends State<Home> {
       topratedmovies=topratedresult['results'];
       tvshows=tvshowsresult['results'];
     });
-    print(tvshows);
+    
+    // to check the data
+    // print(tvshows);
   }
 
   @override
