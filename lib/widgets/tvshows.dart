@@ -1,3 +1,5 @@
+// Container with top-rated tv shows 
+
 import 'package:flutter/material.dart';
 import 'package:tmdb_app/description.dart';
 import 'package:tmdb_app/utils/text.dart';
