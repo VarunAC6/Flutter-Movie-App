@@ -1,3 +1,5 @@
+// Add tmdb_api dependency in pubspec.yaml
+
 import 'package:flutter/material.dart';
 import 'package:tmdb_api/tmdb_api.dart';
 import 'package:tmdb_app/utils/text.dart';
