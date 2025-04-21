@@ -30,6 +30,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  # Add these dependencies
   tmdb_api:
   google_fonts:
 
