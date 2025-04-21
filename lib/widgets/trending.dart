@@ -1,3 +1,5 @@
+// Container with list of trending movie tiles
+
 import 'package:flutter/material.dart';
 import 'package:tmdb_app/description.dart';
 import 'package:tmdb_app/utils/text.dart';
