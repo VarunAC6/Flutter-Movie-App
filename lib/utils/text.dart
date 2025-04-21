@@ -1,3 +1,6 @@
+// Using Google Fonts
+// Add dependency in pubspec.yaml
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
